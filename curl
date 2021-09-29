@@ -1,0 +1,12 @@
+#!/bin/bash
+
+metal=( "Sc" "Y" "Ti" "Zr" "Hf" "V" "Nb" "Ta" "Cr" "Mo" "W" "Mn" "Tc" "Re" "Fe" "Ru" "Os" "Co" "Rh" "Ir" "Ni" "Pd" "Pt" "Cu" "Ag" "Au" "Zn" "Cd" "Hg")
+
+for i in ${metal[@]}
+do
+# Please add the API_KEY
+#curl https://www.materialsproject.org/rest/v2/materials/$i-N/vasp/mp_id?API_KEY=XXX>> log
+curl https://www.materialsproject.org/rest/v2/materials/$i-N-O/vasp/band_gap?API_KEY=XXX >> log
+#python deal_cif.py
+#python deal_band_gap.py
+done
